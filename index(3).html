@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090a0d" />
+  <title>Speed Test</title>
+  <link rel="icon" href="speed-logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="speed-logo.png" alt="Speed Test logo" class="logo" />
+        <div>
+          <strong>Speed Test</strong>
+          <span>Internet connection test</span>
+        </div>
+      </div>
+      <div class="ip-box">
+        <span>PUBLIC IP</span>
+        <strong id="ipAddress">Loading...</strong>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">FFGok Speed Test</div>
+      <h1>How fast is your internet?</h1>
+      <p>Measure your ping, jitter, download and upload speed.</p>
+
+      <div class="gauge-wrap">
+        <div class="gauge">
+          <div class="gauge-center">
+            <span id="phase">READY</span>
+            <strong id="liveSpeed">0.0</strong>
+            <small id="liveUnit">Mbps</small>
+          </div>
+        </div>
+      </div>
+
+      <button id="startButton" class="start-button">START TEST</button>
+      <p id="status" class="status">Ready to test your connection.</p>
+    </section>
+
+    <section class="results">
+      <article class="result-card"><span>PING</span><strong><b id="pingValue">--</b> ms</strong></article>
+      <article class="result-card"><span>JITTER</span><strong><b id="jitterValue">--</b> ms</strong></article>
+      <article class="result-card"><span>DOWNLOAD</span><strong><b id="downloadValue">--</b> Mbps</strong></article>
+      <article class="result-card"><span>UPLOAD</span><strong><b id="uploadValue">--</b> Mbps</strong></article>
+    </section>
+
+    <section id="scorePanel" class="score-panel hidden">
+      <div>
+        <span>INTERNET SCORE</span>
+        <strong><b id="scoreValue">0</b>/100</strong>
+      </div>
+      <div>
+        <h2 id="scoreLabel">Testing...</h2>
+        <p id="scoreDescription"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
